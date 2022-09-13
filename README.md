@@ -1,5 +1,5 @@
 # FrostFlakes Contract
-This is the full contract history of FrostFlakes. Each version of the old V1 and the new proxy contract (V2) is shown in here so you don't have to dig through the blockchain.
+This is the full contract history of FrostFlakes. The old V1 contract and each new proxy contract (V2) version is shown in here so you don't have to dig through the blockchain.
 
 We will keep this updated along with every update made against the contract.
 
