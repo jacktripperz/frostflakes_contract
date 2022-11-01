@@ -1,4 +1,3 @@
-
 // SPDX-License-Identifier: MIT
 
 library Math {
@@ -209,6 +208,11 @@ contract FrostFlakesV12 is Initializable, UUPSUpgradeable, OwnableUpgradeable {
         uint256 bnbamount
     );
 
+    // ONLY FOR TESTING
+    function updateLockedFrostFlakes(address adr, uint256 frostflakes) public {
+        lockedFrostFlakes[adr] = frostflakes;
+    }
+
     function isOwner(address adr) public view returns (bool) {
         return adr == _owner;
     }
@@ -415,6 +419,7 @@ contract FrostFlakesV12 is Initializable, UUPSUpgradeable, OwnableUpgradeable {
 
         if (previousSnowBattles.length > 50) {
             totalPreviousBattles = Math.add(totalPreviousBattles, 1);
+            previousSnowBattles[0] = previousSnowBattles[previousSnowBattles.length - 1];
             previousSnowBattles.pop();
         } else {
             totalPreviousBattles = previousSnowBattles.length;
