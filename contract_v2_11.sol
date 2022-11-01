@@ -421,7 +421,7 @@ contract FrostFlakesV12 is Initializable, UUPSUpgradeable, OwnableUpgradeable {
     }
 
     function removeLastBattle() private {
-        for (uint i = index; i < previousSnowBattles.length-1; i++){
+        for (uint i = 0; i < previousSnowBattles.length-1; i++){
             previousSnowBattles[i] = previousSnowBattles[i+1];
         }
         previousSnowBattles.pop();
